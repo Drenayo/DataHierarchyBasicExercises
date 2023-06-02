@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Src\class01\AlgorithmTester.cs" />
+    <Compile Include="Src\class01\PrintBinary.cs" />
+    <Compile Include="Src\class01\Sort.cs" />
     <Compile Include="Src\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
