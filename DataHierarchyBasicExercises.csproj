@@ -43,11 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Src\class01\AlgorithmTester.cs" />
-    <Compile Include="Src\class01\PrintBinary.cs" />
-    <Compile Include="Src\class01\Sort.cs" />
-    <Compile Include="Src\Program.cs" />
+    <Compile Include="Algorithm\Search.cs" />
+    <Compile Include="DataStructure\MyArrayList.cs" />
+    <Compile Include="DataStructure\MyArrayList2.cs" />
+    <Compile Include="Utils\AlgorithmTester.cs" />
+    <Compile Include="Problem\PrintBinary.cs" />
+    <Compile Include="Algorithm\Sort.cs" />
+    <Compile Include="Main\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\GenerateTestData.cs" />
+    <Compile Include="Utils\PrintResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

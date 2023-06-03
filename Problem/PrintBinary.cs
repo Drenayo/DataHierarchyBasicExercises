@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataHierarchyBasicExercises.Src.class01
+namespace DataHierarchyBasicExercises.Problem
 {
     /// <summary>
     /// 打印二进制，位操作相关练习

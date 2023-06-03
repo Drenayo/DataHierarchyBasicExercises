@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataHierarchyBasicExercises.Src.class01
+namespace DataHierarchyBasicExercises.Utils
 {
     /// <summary>
     /// 对数器 测试算法使用
@@ -66,7 +66,7 @@ namespace DataHierarchyBasicExercises.Src.class01
                 arr1.CopyTo(arr2, 0);
 
                 // 这里调用自己的算法
-                Sort.InsertSort1(arr1);
+                //Sort.InsertSort1(arr1);
                 // 系统的算法，用于对比
                 Array.Sort(arr2);
 
