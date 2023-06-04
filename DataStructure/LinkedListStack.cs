@@ -19,21 +19,21 @@ namespace DataHierarchyBasicExercises.DataStructure
         // 获取栈顶
         public T Peek()
         {
-            return list[Count-1];
+            return list[0];
         }
 
         // 删除栈顶
         public T Pop()
         {
             T temp = Peek();
-            list.RemoveAt(Count - 1);
+            list.RemoveAt(0);
             return temp;   
         }
 
         // 向栈中添加元素
         public void Push(T item)
         {
-            list.Add(item);
+            list.Insert(0, item);
         }
 
         public override string ToString()

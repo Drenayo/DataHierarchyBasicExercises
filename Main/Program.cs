@@ -17,15 +17,33 @@ namespace DataHierarchyBasicExercises
         static void Main(string[] args)
         {
 
+            Stack<string> stck = new Stack<string>();
+
 
             #region 栈与队列 数据结构测试
-
+            // 数组队列测试
+            ArrayQueue<string> strQu = new ArrayQueue<string>();
+            strQu.Enqueue("物质");
+            strQu.Enqueue("嘻嘻");
+            strQu.Enqueue("牢笼");
+            Console.WriteLine(strQu);
+            strQu.Dequeue();
+            Console.WriteLine(strQu);
+            strQu.Dequeue();
+            Console.WriteLine(strQu);
+            strQu.Dequeue();
+            Console.WriteLine(strQu); 
+            // 写一个通用的性能测试
+            // 让所有自定义数据结构都继承同一个父接口
             // 数组队列和链表队列
 
 
 
+            // 链表头部栈顶 和 链表尾部栈顶 测试
+            // 链表头部O1链表尾部On
 
 
+            // 数组栈和链表栈性能测试
 
             // 数组栈 和 链表栈 的测试
             //LinkedListStack<string> stack = new LinkedListStack<string>();
