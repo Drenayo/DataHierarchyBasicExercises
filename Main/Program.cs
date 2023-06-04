@@ -16,6 +16,46 @@ namespace DataHierarchyBasicExercises
     {
         static void Main(string[] args)
         {
+            // fList<int> list = new List<int>();
+
+            #region  自定义链表数据结构测试
+
+            SingleLinkedList<string> strList = new SingleLinkedList<string>();
+            strList.Add("测试1");
+            strList.Add("无敌2");
+            strList.Add("好好3");
+            strList.Add("迭代4");
+            strList.Add("滴滴5");
+            Console.WriteLine(strList);
+            strList.Remove("无敌2");
+            Console.WriteLine(strList);
+            strList.Remove("好好3");
+            Console.WriteLine(strList);
+            strList.Remove("滴滴5");
+            Console.WriteLine(strList);
+            strList.Remove("滴滴5sa");
+            Console.WriteLine(strList);
+            //Console.WriteLine(strList);
+            //strList.Insert(1, "无敌之前");
+            //Console.WriteLine(strList);
+            //strList.Insert(1, "无敌之前2");
+            //Console.WriteLine(strList);
+            //Console.WriteLine(strList.GetValue(1) + "   " + strList.GetValue(2));
+            //strList.SetValue(2, "测试修改无敌");
+            //Console.WriteLine(strList.GetValue(1) + "   " + strList.GetValue(2));
+            //Console.WriteLine(strList);
+            //Console.WriteLine("//----------------------");
+            //Console.WriteLine(strList);
+            //Console.WriteLine(strList.Contains("滴滴s"));
+            //strList.SetValue(4, "nullllll设置");
+            //strList.SetValue(1, null);
+            //Console.WriteLine(strList);
+            //Console.WriteLine("//----------------------");
+            ////strList.RemoveAt(1);
+            //strList.Remove("测试1");
+            //Console.WriteLine(strList);
+
+            #endregion
 
             #region 各种查找算法 查找速度ms对比
             // 二分查找的性能消耗 VS 系统自带的

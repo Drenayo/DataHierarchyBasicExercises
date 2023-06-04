@@ -44,6 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Algorithm\Search.cs" />
+    <Compile Include="DataStructure\ArrayStack.cs" />
+    <Compile Include="DataStructure\IStack.cs" />
+    <Compile Include="DataStructure\SingleLinkedList.cs" />
     <Compile Include="DataStructure\MyArrayList.cs" />
     <Compile Include="DataStructure\MyArrayList2.cs" />
     <Compile Include="Utils\AlgorithmTester.cs" />
