@@ -196,7 +196,7 @@ namespace DataHierarchyBasicExercises.DataStructure
         public override string ToString()
         {
             StringBuilder res = new StringBuilder();
-            res.Append(string.Format($"[元素数量:{count},数组容量:{data.Length}]\n"));
+            //res.Append(string.Format($"[元素数量:{count},数组容量:{data.Length}]\n"));
             res.Append(string.Format("["));
 
             for (int i = 0; i < count; i++)

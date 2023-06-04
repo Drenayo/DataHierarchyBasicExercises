@@ -16,25 +16,47 @@ namespace DataHierarchyBasicExercises
     {
         static void Main(string[] args)
         {
-            // fList<int> list = new List<int>();
+
+
+            #region 栈与队列 数据结构测试
+
+            // 数组队列和链表队列
+
+
+
+
+
+
+            // 数组栈 和 链表栈 的测试
+            //LinkedListStack<string> stack = new LinkedListStack<string>();
+
+            //stack.Push("第一号");
+            //stack.Push("第二号");
+            //stack.Push("第三号");
+            //Console.WriteLine(stack);
+            //Console.WriteLine(stack.Peek());
+            //Console.WriteLine(stack.Pop());
+            //Console.WriteLine(stack);
+            //Console.WriteLine(stack.IsEmpty);
+            #endregion
 
             #region  自定义链表数据结构测试
 
-            SingleLinkedList<string> strList = new SingleLinkedList<string>();
-            strList.Add("测试1");
-            strList.Add("无敌2");
-            strList.Add("好好3");
-            strList.Add("迭代4");
-            strList.Add("滴滴5");
-            Console.WriteLine(strList);
-            strList.Remove("无敌2");
-            Console.WriteLine(strList);
-            strList.Remove("好好3");
-            Console.WriteLine(strList);
-            strList.Remove("滴滴5");
-            Console.WriteLine(strList);
-            strList.Remove("滴滴5sa");
-            Console.WriteLine(strList);
+            //SingleLinkedList<string> strList = new SingleLinkedList<string>();
+            //strList.Add("测试1");
+            //strList.Add("无敌2");
+            //strList.Add("好好3");
+            //strList.Add("迭代4");
+            //strList.Add("滴滴5");
+            //Console.WriteLine(strList);
+            //strList.Remove("无敌2");
+            //Console.WriteLine(strList);
+            //strList.Remove("好好3");
+            //Console.WriteLine(strList);
+            //strList.Remove("滴滴5");
+            //Console.WriteLine(strList);
+            //strList.Remove("滴滴5sa");
+            //Console.WriteLine(strList);
             //Console.WriteLine(strList);
             //strList.Insert(1, "无敌之前");
             //Console.WriteLine(strList);
