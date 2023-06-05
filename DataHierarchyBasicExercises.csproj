@@ -44,11 +44,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Algorithm\Search.cs" />
+    <Compile Include="DataStructure\ArrayCycleQueue.cs" />
     <Compile Include="DataStructure\ArrayQueue.cs" />
     <Compile Include="DataStructure\ArrayStack.cs" />
+    <Compile Include="DataStructure\IDictionary.cs" />
     <Compile Include="DataStructure\IQueue.cs" />
     <Compile Include="DataStructure\IStack.cs" />
+    <Compile Include="DataStructure\LinkedListDictionary.cs" />
+    <Compile Include="DataStructure\LinkedListQueue.cs" />
     <Compile Include="DataStructure\LinkedListStack.cs" />
+    <Compile Include="DataStructure\MyArrayList3.cs" />
     <Compile Include="DataStructure\SingleLinkedList.cs" />
     <Compile Include="DataStructure\MyArrayList.cs" />
     <Compile Include="DataStructure\MyArrayList2.cs" />

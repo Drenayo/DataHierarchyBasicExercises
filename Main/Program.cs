@@ -17,31 +17,92 @@ namespace DataHierarchyBasicExercises
         static void Main(string[] args)
         {
 
-            Stack<string> stck = new Stack<string>();
+            List<string> list = new List<string>();
+            list.Add("1");
+            list.Add("1");
+            list.Add("1");
+            list.Add("1");
 
+            Console.WriteLine(list.Count);
+
+            #region 集合 字典 数据结构
+            //LinkedListDictionary<string, int> dic = new LinkedListDictionary<string, int>();
+            //dic.Add("11", 12);
+            //dic.Add("22", 34);
+            //dic.Add("33", 56);
+            ////dic.Add("33", 56);
+
+            //Console.WriteLine(dic.GetValue("22"));
+            //dic.SetValue("22", 3412);
+            //// dic.Remove("22");
+            //Console.WriteLine(dic.ContainsKey("22"));
+
+            #endregion
 
             #region 栈与队列 数据结构测试
+            // 链表队列
+            //LinkedListQueue<String> strList = new LinkedListQueue<string>();
+            //strList.Enqueue("dd");
+            //strList.Enqueue("ee");
+            //strList.Enqueue("aa");
+            //Console.WriteLine(strList);
+            //strList.Dequeue();
+            //Console.WriteLine(strList);
+
+
+
+            // 循环数组队列 VS 普通动态数组队列 性能测试  数组越大，普通动态数组队列出队时间越长，10万基本上就等不出来结果了，一万的差距是百倍以上，5万则是千倍
+            //Stopwatch t1 = new Stopwatch();
+            //Stopwatch t2 = new Stopwatch();
+
+            //ArrayQueue<string> arrQueue = new ArrayQueue<string>();
+            //ArrayCycleQueue<string> arrCycle = new ArrayCycleQueue<string>(10);
+
+            //for (int i = 0; i < 100000; i++)
+            //{
+            //    arrQueue.Enqueue(i.ToString());
+            //    arrCycle.Enqueue(i.ToString());
+            //}
+
+            //t1.Start();
+
+            //for (int i = 0; i < 50000; i++)
+            //    arrQueue.Dequeue();
+            //t1.Stop();
+
+            //Console.WriteLine($"普通出队用时：{t1.ElapsedMilliseconds} ms \n\n");
+
+            //t2.Start();
+            //for (int i = 0; i < 50000; i++)
+            //    arrCycle.Dequeue();
+            //t2.Stop();
+
+            //Console.WriteLine($"循环队列出队用时：{t2.ElapsedMilliseconds} ms \n\n");
+            // 循环数组队列测试
+            //ArrayCycleQueue<string> arr = new ArrayCycleQueue<string>(10);
+            //arr.Enqueue("物质");
+            //arr.Enqueue("热闹");
+            //arr.Enqueue("人类");
+            //Console.WriteLine(arr);
+            //arr.Dequeue();
+            //Console.WriteLine(arr);
             // 数组队列测试
-            ArrayQueue<string> strQu = new ArrayQueue<string>();
-            strQu.Enqueue("物质");
-            strQu.Enqueue("嘻嘻");
-            strQu.Enqueue("牢笼");
-            Console.WriteLine(strQu);
-            strQu.Dequeue();
-            Console.WriteLine(strQu);
-            strQu.Dequeue();
-            Console.WriteLine(strQu);
-            strQu.Dequeue();
-            Console.WriteLine(strQu); 
-            // 写一个通用的性能测试
+            //ArrayQueue<string> strQu = new ArrayQueue<string>();
+            //strQu.Enqueue("物质");
+            //strQu.Enqueue("嘻嘻");
+            //strQu.Enqueue("牢笼");
+            //Console.WriteLine(strQu);
+            //strQu.Dequeue();
+            //Console.WriteLine(strQu);
+            //strQu.Dequeue();
+            //Console.WriteLine(strQu);
+            //strQu.Dequeue();
+            //Console.WriteLine(strQu); 
             // 让所有自定义数据结构都继承同一个父接口
             // 数组队列和链表队列
 
-
-
             // 链表头部栈顶 和 链表尾部栈顶 测试
             // 链表头部O1链表尾部On
-
 
             // 数组栈和链表栈性能测试
 
