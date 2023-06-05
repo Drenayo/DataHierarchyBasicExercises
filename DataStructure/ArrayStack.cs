@@ -12,7 +12,7 @@ namespace DataHierarchyBasicExercises.DataStructure
         // 直接使用之前写好的动态数组来作为数据存放
         private MyArrayList2<T> arr;
         public int Count { get { return arr.Count; } }
-        public bool IsEmpty { get { return arr.Count != 0; } }
+        public bool IsEmpty { get { return arr.Count == 0; } }
 
         public ArrayStack(int capacity)
         {
@@ -32,13 +32,13 @@ namespace DataHierarchyBasicExercises.DataStructure
         // 获取栈顶元素
         public T Peek()
         {
-            return arr.GetValue(Count-1);
+            return arr.GetValue(Count - 1);
         }
 
         // 删除栈顶元素
         public T Pop()
         {
-            return arr.RemoveAt(Count-1);
+            return arr.RemoveAt(Count - 1);
         }
 
         public override string ToString()

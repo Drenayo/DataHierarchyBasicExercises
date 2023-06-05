@@ -14,7 +14,7 @@ namespace DataHierarchyBasicExercises.DataStructure
             list = new List<T>();
         }
         public int Count { get { return list.Count; } }
-        public bool IsEmpty { get { return list.Count != 0; } }
+        public bool IsEmpty { get { return list.Count == 0; } }
 
         // 获取栈顶
         public T Peek()

@@ -18,7 +18,7 @@ namespace DataHierarchyBasicExercises.DataStructure
             arr = new MyArrayList2<T>(capacity);
         }
         public int Count { get { return arr.Count; } }
-        public bool IsEmpty { get { return arr.Count != 0; } }
+        public bool IsEmpty { get { return arr.Count == 0; } }
 
         public void Clear()
         {
