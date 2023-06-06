@@ -19,6 +19,17 @@ namespace DataHierarchyBasicExercises
 
 
             #region 二叉树
+
+            CompleteBinaryTree<String> tree = new CompleteBinaryTree<String>(30);
+            for (char i = 'A'; i <= 'Z'; i++)
+            {
+                tree.Add(i.ToString());
+            }
+            tree.PreorderTraversal();
+            tree.InorderTraversal();
+            tree.PostorderTraversal();
+            tree.LevelOrderTraversal();
+            
             /*
              * 空树
              * 只有一个根节点的树

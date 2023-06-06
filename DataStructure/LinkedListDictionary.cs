@@ -64,7 +64,8 @@ namespace DataHierarchyBasicExercises.DataStructure
 
             public override string ToString()
             {
-                return $"[{key.ToString()}|{value.ToString()}]";
+                //return $"[{key.ToString()}|{value.ToString()}]";
+                return $"[{key}|{value}]";
             }
         }
 

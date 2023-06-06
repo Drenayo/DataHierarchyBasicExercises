@@ -47,6 +47,7 @@
     <Compile Include="DataStructure\ArrayCycleQueue.cs" />
     <Compile Include="DataStructure\ArrayQueue.cs" />
     <Compile Include="DataStructure\ArrayStack.cs" />
+    <Compile Include="DataStructure\BinaryTree.cs" />
     <Compile Include="DataStructure\IDictionary.cs" />
     <Compile Include="DataStructure\IQueue.cs" />
     <Compile Include="DataStructure\IStack.cs" />

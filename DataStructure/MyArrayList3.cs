@@ -64,7 +64,7 @@ namespace DataHierarchyBasicExercises.DataStructure
             }
 
             T del = data[first];
-            data[first] = default(T);
+            data[first] = default;
 
             first = (first + 1) % data.Length;
 
