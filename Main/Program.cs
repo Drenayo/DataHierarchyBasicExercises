@@ -17,13 +17,18 @@ namespace DataHierarchyBasicExercises
         static void Main(string[] args)
         {
 
-            List<string> list = new List<string>();
-            list.Add("1");
-            list.Add("1");
-            list.Add("1");
-            list.Add("1");
 
-            Console.WriteLine(list.Count);
+            #region 二叉树
+            /*
+             * 空树
+             * 只有一个根节点的树
+             *  
+             * 
+             * 
+             */
+            #endregion
+
+
 
             #region 集合 字典 数据结构
             //LinkedListDictionary<string, int> dic = new LinkedListDictionary<string, int>();

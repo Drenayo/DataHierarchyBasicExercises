@@ -26,6 +26,8 @@ namespace DataHierarchyBasicExercises.DataStructure
         public T Pop()
         {
             T temp = Peek();
+            if (temp == null)
+                throw new InvalidOperationException("栈为空！");
             list.RemoveAt(0);
             return temp;   
         }

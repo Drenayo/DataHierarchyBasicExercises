@@ -25,6 +25,8 @@ namespace DataHierarchyBasicExercises.DataStructure
 
         public T Dequeue()
         {
+            if (arr.IsEmpty)
+                throw new InvalidOperationException("队列为空！");
             return arr.RemoveFirst();
         }
 

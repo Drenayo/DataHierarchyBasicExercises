@@ -38,6 +38,8 @@ namespace DataHierarchyBasicExercises.DataStructure
         // 删除栈顶元素
         public T Pop()
         {
+            if (arr.IsEmpty)
+                throw new InvalidOperationException("栈为空！");
             return arr.RemoveAt(Count - 1);
         }
 
