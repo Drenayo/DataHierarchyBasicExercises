@@ -59,6 +59,7 @@
     <Compile Include="DataStructure\MyArrayList.cs" />
     <Compile Include="DataStructure\MyArrayList2.cs" />
     <Compile Include="DataStructure\TreeChild.cs" />
+    <Compile Include="DataStructure\TreeChildBrother.cs" />
     <Compile Include="DataStructure\TreeParent.cs" />
     <Compile Include="Utils\AlgorithmTester.cs" />
     <Compile Include="Problem\PrintBinary.cs" />

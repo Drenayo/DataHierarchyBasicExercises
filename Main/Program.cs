@@ -19,18 +19,41 @@ namespace DataHierarchyBasicExercises
 
 
             #region 树
+
+            // 树的孩子兄弟表示法 二叉链表表示法
+            TreeChildBrother<string> tree = new TreeChildBrother<string>();
+
+            tree.Add("A",tree.Root);
+            tree.Add("B",tree.Root);
+            tree.Add("C",tree.Root);
+            tree.Add("D",tree.Root);
+            tree.Add("E",tree.Root);
+            tree.Add("F",tree.Root);
+            tree.Add("G",tree.Root);
+
+            //Console.WriteLine(tree.FindNodeByData_(tree.Root,"F"));
+
+            //tree.PreOrderTraversal(tree.Root);
+            //Console.WriteLine();
+            //tree.InOrderTraversal(tree.Root);
+            //Console.WriteLine();
+            //tree.PostOrderTraversal(tree.Root);
+
+
+
+
             // 子节点链表示法
-            TreeChild<string> tree = new TreeChild<string>("Root");
-            tree.AddNode("A", tree.Root);
-            tree.AddNode("B", tree.Root);
-            tree.AddNode("C", tree.Root);
-            tree.AddNode("E", tree.AddNode("D", tree.AddNode("C", tree.Root)));
-            Console.WriteLine("前序：");
-            tree.PreOrderTraversal(tree.Root);
-            Console.WriteLine();
-            Console.WriteLine("层序：");
-            tree.LevelOrderTraversal(tree.Root);
-            Console.WriteLine();
+            //TreeChild<string> tree = new TreeChild<string>("Root");
+            //tree.AddNode("A", tree.Root);
+            //tree.AddNode("B", tree.Root);
+            //tree.AddNode("C", tree.Root);
+            //tree.AddNode("E", tree.AddNode("D", tree.AddNode("C", tree.Root)));
+            //Console.WriteLine("前序：");
+            //tree.PreOrderTraversal(tree.Root);
+            //Console.WriteLine();
+            //Console.WriteLine("层序：");
+            //tree.LevelOrderTraversal(tree.Root);
+            //Console.WriteLine();
 
 
             //tree.PrintArray();
