@@ -18,7 +18,62 @@ namespace DataHierarchyBasicExercises
         {
 
 
-            #region 二叉树
+            #region 树
+            // 子节点链表示法
+            TreeChild<string> tree = new TreeChild<string>("Root");
+            tree.AddNode("A", tree.Root);
+            tree.AddNode("B", tree.Root);
+            tree.AddNode("C", tree.Root);
+            tree.AddNode("E", tree.AddNode("D", tree.AddNode("C", tree.Root)));
+            Console.WriteLine("前序：");
+            tree.PreOrderTraversal(tree.Root);
+            Console.WriteLine();
+            Console.WriteLine("层序：");
+            tree.LevelOrderTraversal(tree.Root);
+            Console.WriteLine();
+
+
+            //tree.PrintArray();
+            //Console.WriteLine("深度：" + tree.GetDeep());
+            //Console.WriteLine("返回根的第二个子节点：" + tree.GetChild(tree.Root, 3));
+
+
+
+            //List<TreeChild<string>.Node> list = new List<TreeChild<string>.Node>();
+            //list = tree.GetChildren(tree.Root);
+            //Console.WriteLine("测试返回Root的子节点集合：");
+            //foreach (TreeChild<string>.Node item in list)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            // 父节点表示法
+            //Tree_Parent<string> tree = new Tree_Parent<string>("Root");
+            //Tree_Parent<string>.Node nodeTemp = null;
+            //tree.addNode("A", tree.Root);
+            //tree.addNode("B", tree.Root);
+            //tree.addNode("C", tree.Root);
+
+            //nodeTemp = tree.GetNodeByData("A");
+            //tree.addNode("D", nodeTemp);
+            //tree.addNode("E", nodeTemp);
+            //tree.addNode("F", nodeTemp);
+
+            //nodeTemp = tree.GetNodeByData("F");
+            //tree.addNode("I", nodeTemp);
+            //tree.addNode("K", nodeTemp);
+            //tree.addNode("J", nodeTemp);
+
+            //foreach (Tree_Parent<string>.Node node in tree.GetChildren(nodeTemp))
+            //{
+            //    Console.WriteLine(node);
+            //}
+            //tree.PrintArray();
+            //Console.WriteLine("树深度:" + tree.GetDeep().ToString());
+
+
+
+
+
             // 堆排序验证
             //CompleteBinaryTree<int> tree = new CompleteBinaryTree<int>(122);
             ////for (int i = 100; i > 0; i--)
