@@ -140,6 +140,17 @@ namespace DataHierarchyBasicExercises.DataStructure
         }
 
 
+        // 转为数组
+        //public T[] ToArray()
+        //{
+        //    T[] newArr = new T[Count];
+        //    for (int i = 0; i < count; i++)
+        //    {
+        //        newArr[i] = arr[i];
+        //    }
+        //    return newArr;
+        //}
+
         // 添加操作
         public void Add(T item)
         {
@@ -151,15 +162,66 @@ namespace DataHierarchyBasicExercises.DataStructure
         }
 
 
-
+        // 把堆顶元素交换到后面，再次维护堆结构，循环直到排序完成
         // 堆排序*******************
+        public void HeapSort(int[] arr, int n)
+        {
+            // 建堆
+            BuildMaxHeap(arr, n);
 
-        // 转换为大顶堆
+            // 排序
+            // 从堆末尾开始
+            for (int i = n - 1; i > 0; i--)
+            {
+                int temp = arr[i];
+                arr[i] = arr[0];
+                arr[0] = temp;
+                Heapify(arr, i, 0);
+            }
+        }
 
-        // 转换为小顶堆
 
-        // 调整堆结构
+        // 构建大顶堆
+        private void BuildMaxHeap(int[] arr, int n)
+        {
+            // 从底部开始，下标小于等于0结束
+            for (int i = n / 2 - 1; i >= 0; i--)
+            {
+                Heapify(arr, n, i);
+            }
+        }
 
+        /// <summary>
+        /// 维护堆的性质
+        /// </summary>
+        /// <param name="arr">数组</param>
+        /// <param name="n">数组长度</param>
+        /// <param name="index">待维护节点的下标</param>
+        private void Heapify(int[] arr, int n, int index)
+        {
+            int largest = index;//初始化最大值为当前节点
+            int left = index * 2 + 1;
+            int right = index * 2 + 2;
+
+            // 找出最大值
+            // 范围判定 && 将左子节点与当前节点比较，大则交换
+            if (left < n && arr[left] > arr[largest])
+                largest = left;
+            // 将右子节点与当前节点比较，大则交换
+            if (right < n && arr[right] > arr[largest])
+                largest = right;
+
+            // 如果下标发生了交换，则对应值也交换，意味着堆中最大值已经被交换到了父节点
+            if (largest != index)
+            {
+                int temp = arr[largest];
+                arr[largest] = arr[index];
+                arr[index] = temp;
+
+                // 是否还有后续节点，递归继续查左右子节点是否有子子节点大于的情况
+                Heapify(arr, n, largest);
+            }
+        }
     }
 
 

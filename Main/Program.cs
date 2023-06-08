@@ -19,17 +19,32 @@ namespace DataHierarchyBasicExercises
 
 
             #region 二叉树
+            // 堆排序验证
+            //CompleteBinaryTree<int> tree = new CompleteBinaryTree<int>(122);
+            ////for (int i = 100; i > 0; i--)
+            ////{
+            ////    tree.Add(i);
+            ////}
+            ////tree.LevelOrderTraversal_();
 
-            CompleteBinaryTree<String> tree = new CompleteBinaryTree<String>(30);
-            for (char i = 'A'; i <= 'Z'; i++)
-            {
-                tree.Add(i.ToString());
-            }
-            tree.PreorderTraversal();
-            tree.InorderTraversal();
-            tree.PostorderTraversal();
-            tree.LevelOrderTraversal();
-            
+            ////tree.HeapSort(tree.ToArray(), tree.Count);
+            //int[] arr = { 21, 4, 65, 7, 8, 45, 12, 3456, 768, 34 };
+            //tree.HeapSort(arr, arr.Length);
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    Console.WriteLine(arr[i]);
+            //}
+
+            //CompleteBinaryTree<String> tree = new CompleteBinaryTree<String>(30);
+            //for (char i = 'A'; i <= 'Z'; i++)
+            //{
+            //    tree.Add(i.ToString());
+            //}
+            //tree.PreorderTraversal();
+            //tree.InorderTraversal();
+            //tree.PostorderTraversal();
+            //tree.LevelOrderTraversal();
+
             /*
              * 空树
              * 只有一个根节点的树
