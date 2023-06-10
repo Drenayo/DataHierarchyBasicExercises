@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DataHierarchyBasicExercises.Problem;
 using DataHierarchyBasicExercises.Algorithm;
 using DataHierarchyBasicExercises.DataStructure;
 using DataHierarchyBasicExercises.Utils;
@@ -16,6 +15,21 @@ namespace DataHierarchyBasicExercises
     {
         static void Main(string[] args)
         {
+            List<int> list = new List<int>();
+            list = GenerateTestData.GetRandomLengthList_Int(10, 100);
+            PrintResult<int>.PrintList(list, "Y:");
+            Sort.QuickSort(list);
+            PrintResult<int>.PrintList(list, "X:");
+            #region 算法思想学习
+            //StopwatchTest.SortSpeedTest(10000, 10000, SortType.冒泡);
+            //StopwatchTest.SortSpeedTest(10000, 10000, SortType.归并);
+            //StopwatchTest.SortSpeedTest(10000, 10000, SortType.插入);
+            //StopwatchTest.SortSpeedTest(10000, 10000, SortType.选择);
+            StopwatchTest.SerachSpeedTest(10000, 100, 100000, SearchType.遍历, 50);
+            StopwatchTest.SerachSpeedTest(10000, 100, 100000, SearchType.二分, 50);
+            StopwatchTest.SerachSpeedTest(10000, 100, 100000, SearchType.系统, 50);
+
+            #endregion
 
             #region 字符串
             //string str1 = "zaaab";
@@ -49,21 +63,24 @@ namespace DataHierarchyBasicExercises
             #region 树
 
             // 树的孩子兄弟表示法 二叉链表表示法
-            TreeChildBrother<string> tree = new TreeChildBrother<string>();
+            //TreeChildBrother<string> tree = new TreeChildBrother<string>();
 
-            tree.Add("A", tree.Root);
-            tree.Add("B", tree.Root);
-            tree.Add("C", tree.FindNodeByData("B"));
-            tree.Add("D", tree.Root);
-            tree.Add("E", tree.Root);
-            tree.Add("F", tree.Root);
+            //tree.Add("A", tree.Root);
+            //tree.Add("B", tree.Root);
+            //tree.Add("C", tree.FindNodeByData("B"));
+            //tree.Add("D", tree.Root);
+            //tree.Add("E", tree.Root);
+            //tree.Add("F", tree.Root);
 
-            List<TreeChildBrother<string>.Node> list = tree.GetChildren(tree.Root);
+            //List<TreeChildBrother<string>.Node> list = tree.GetChildren(tree.Root);
 
-            foreach (TreeChildBrother<string>.Node item in list)
-            {
-                Console.WriteLine(item);
-            }
+            //foreach (TreeChildBrother<string>.Node item in list)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+
+
             //  tree.LevelOrderTraversal();
 
             //Console.WriteLine(tree.FindNodeByData_(tree.Root, "F"));
@@ -505,23 +522,6 @@ namespace DataHierarchyBasicExercises
             #endregion
 
             Console.ReadKey();
-        }
-
-        static void ToString_(int count, int Capacity, object[] data)
-        {
-            StringBuilder res = new StringBuilder();
-            res.Append(string.Format($"[元素数量:{count},数组容量:{Capacity}]\n"));
-            res.Append(string.Format("["));
-
-            for (int i = 0; i < count; i++)
-            {
-                res.Append(data[i]);
-                if (i != count - 1)
-                    res.Append(", ");
-            }
-
-            res.Append(string.Format("]"));
-            Console.WriteLine(res.ToString());
         }
     }
 }

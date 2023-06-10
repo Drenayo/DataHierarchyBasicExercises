@@ -14,7 +14,7 @@ namespace DataHierarchyBasicExercises.Utils
         /// <summary>
         /// 生成一个固定长度的随机int数组
         /// </summary>
-        public static int[] GetRandomLengthArray(int size, int maxValue)
+        public static int[] GetRandomLengthArray_Int(int size, int maxValue)
         {
             Random random = new Random();
             int[] arr = new int[size];
@@ -30,7 +30,7 @@ namespace DataHierarchyBasicExercises.Utils
         /// <summary>
         /// 生成一个固定长度的随机List<int>
         /// </summary>
-        public static List<int> GetRandomLengthList(int size, int maxValue)
+        public static List<int> GetRandomLengthList_Int(int size, int maxValue)
         {
             Random random = new Random();
             List<int> list = new List<int>();
@@ -38,6 +38,29 @@ namespace DataHierarchyBasicExercises.Utils
             {
                 list.Add(random.Next(maxValue));
             }
+
+            return list;
+        }
+
+        /// <summary>
+        /// 生成一个固定长度的随机List string
+        /// </summary>
+        public static List<string> GetRandomLengthList_String(int size,int strLength)
+        {
+            const string validChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            Random random = new Random();
+            List<string> list = new List<string>();
+
+            for (int i = 0; i < size; i++)
+            {
+                StringBuilder str = new StringBuilder(strLength);
+                for (int j = 0; j < strLength; j++)
+                {
+                    str.Append(validChars[random.Next(validChars.Length)]);
+                }
+                list.Add(str.ToString());
+            }
+            
 
             return list;
         }

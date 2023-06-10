@@ -44,6 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Algorithm\Search.cs" />
+    <Compile Include="Algorithm\分治思想.cs" />
+    <Compile Include="Algorithm\枚举思想.cs" />
     <Compile Include="DataStructure\ArrayCycleQueue.cs" />
     <Compile Include="DataStructure\ArrayQueue.cs" />
     <Compile Include="DataStructure\ArrayStack.cs" />
@@ -63,12 +65,12 @@
     <Compile Include="DataStructure\TreeChildBrother.cs" />
     <Compile Include="DataStructure\TreeParent.cs" />
     <Compile Include="Utils\AlgorithmTester.cs" />
-    <Compile Include="Problem\PrintBinary.cs" />
     <Compile Include="Algorithm\Sort.cs" />
     <Compile Include="Main\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\GenerateTestData.cs" />
     <Compile Include="Utils\PrintResult.cs" />
+    <Compile Include="Utils\StopwatchTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

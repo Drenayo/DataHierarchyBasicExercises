@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 namespace DataHierarchyBasicExercises.Algorithm
 {
     /// <summary>
-    /// 查找算法
+    /// 查找算法 在有序的数据集合中进行，目的是快速找到目标元素
+    /// 遍历、二分、插值、哈希、斐波那契查找
     /// </summary>
-    class Search
+    class Search<T>
     {
         // 二分查找
-        public static int BinarySearch(List<int> list, int target)
+        public static int BinarySearch(List<T> list, T target)
         {
             int left = 0;
             int right = list.Count - 1;
@@ -21,11 +22,11 @@ namespace DataHierarchyBasicExercises.Algorithm
             {
                 int mid = (left + right) / 2;
 
-                if (list[mid] == target)
+                if (list[mid].Equals(target))
                 {
                     return mid;
                 }
-                else if (list[mid] > target)
+                else if (list[mid].Equals(target))
                 {
                     right = mid - 1;
                 }
@@ -34,14 +35,13 @@ namespace DataHierarchyBasicExercises.Algorithm
                     left = mid + 1;
                 }
             }
-
             return -1;
         }
 
 
 
         // 遍历查找
-        public static int ErgodicSearch(List<int> list, int target)
+        public static int LinearSearch(List<T> list, T target)
         {
             for (int i = 0; i < list.Count; i++)
             {
@@ -55,7 +55,7 @@ namespace DataHierarchyBasicExercises.Algorithm
 
 
         // 系统自带
-        public static int SystemSearch(List<int> list, int target)
+        public static int ListSearch(List<T> list, T target)
         {
             return list.IndexOf(target);
         }
