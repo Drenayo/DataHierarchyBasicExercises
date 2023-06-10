@@ -15,19 +15,22 @@ namespace DataHierarchyBasicExercises
     {
         static void Main(string[] args)
         {
-            List<int> list = new List<int>();
-            list = GenerateTestData.GetRandomLengthList_Int(10, 100);
-            PrintResult<int>.PrintList(list, "Y:");
-            Sort.QuickSort(list);
-            PrintResult<int>.PrintList(list, "X:");
+            //List<int> list = new List<int>();
+            //list = GenerateTestData.GetRandomLengthList_Int(10, 100);
+            //PrintResult<int>.PrintList(list, "Y:");
+            //Sort.QuickSort(list);
+            //PrintResult<int>.PrintList(list, "X:");
             #region 算法思想学习
-            //StopwatchTest.SortSpeedTest(10000, 10000, SortType.冒泡);
-            //StopwatchTest.SortSpeedTest(10000, 10000, SortType.归并);
-            //StopwatchTest.SortSpeedTest(10000, 10000, SortType.插入);
-            //StopwatchTest.SortSpeedTest(10000, 10000, SortType.选择);
-            StopwatchTest.SerachSpeedTest(10000, 100, 100000, SearchType.遍历, 50);
-            StopwatchTest.SerachSpeedTest(10000, 100, 100000, SearchType.二分, 50);
-            StopwatchTest.SerachSpeedTest(10000, 100, 100000, SearchType.系统, 50);
+            StopwatchTest.SortSpeedTest(10000, 10000, SortType.冒泡);
+            StopwatchTest.SortSpeedTest(10000, 10000, SortType.归并);
+            StopwatchTest.SortSpeedTest(10000, 10000, SortType.插入);
+            StopwatchTest.SortSpeedTest(10000, 10000, SortType.选择);
+            StopwatchTest.SortSpeedTest(10000, 10000, SortType.快速);
+
+
+            //StopwatchTest.SerachSpeedTest(10000, 100, 100000, SearchType.遍历, 50);
+            //StopwatchTest.SerachSpeedTest(10000, 100, 100000, SearchType.二分, 50);
+            //StopwatchTest.SerachSpeedTest(10000, 100, 100000, SearchType.系统, 50);
 
             #endregion
 
