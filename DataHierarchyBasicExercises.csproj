@@ -55,6 +55,7 @@
     <Compile Include="DataStructure\LinkedListQueue.cs" />
     <Compile Include="DataStructure\LinkedListStack.cs" />
     <Compile Include="DataStructure\MyArrayList3.cs" />
+    <Compile Include="DataStructure\MyString.cs" />
     <Compile Include="DataStructure\SingleLinkedList.cs" />
     <Compile Include="DataStructure\MyArrayList.cs" />
     <Compile Include="DataStructure\MyArrayList2.cs" />

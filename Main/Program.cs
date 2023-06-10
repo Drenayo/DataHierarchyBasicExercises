@@ -17,19 +17,48 @@ namespace DataHierarchyBasicExercises
         static void Main(string[] args)
         {
 
+            #region 字符串
+            //string str1 = "zaaab";
+            //string str2 = "aaaa";
+            //Console.WriteLine(string.Compare(str1, str2));
+
+            //MyString str2 = new MyString("dasdsaa");
+            //Console.WriteLine(MyString.Compare(str1, str2));
+            //MyString str2 = str1.Copy();
+            //Console.WriteLine(str1);
+            //Console.WriteLine(str2);
+            //Console.WriteLine(MyString.Concat(str1,str2));
+
+            Stopwatch t1 = new Stopwatch();
+            StringBuilder strb = new StringBuilder();
+            for (int i = 0; i < 10000000; i++)
+            {
+                strb.Append(i.ToString());
+            }
+            strb.Append("A");
+
+            t1.Start();
+            MyString str1 = new MyString(strb.ToString());
+            Console.WriteLine(str1.IndexOf_BF("A"));
+            t1.Stop();
+            Console.WriteLine($"查询用时：{t1.ElapsedMilliseconds} ms \n\n");
+
+            #endregion
+
+
 
             #region 树
 
             // 树的孩子兄弟表示法 二叉链表表示法
-            TreeChildBrother<string> tree = new TreeChildBrother<string>();
+            //TreeChildBrother<string> tree = new TreeChildBrother<string>();
 
-            tree.Add("A",tree.Root);
-            tree.Add("B",tree.Root);
-            tree.Add("C",tree.Root);
-            tree.Add("D",tree.Root);
-            tree.Add("E",tree.Root);
-            tree.Add("F",tree.Root);
-            tree.Add("G",tree.Root);
+            //tree.Add("A",tree.Root);
+            //tree.Add("B",tree.Root);
+            //tree.Add("C",tree.Root);
+            //tree.Add("D",tree.Root);
+            //tree.Add("E",tree.Root);
+            //tree.Add("F",tree.Root);
+            //tree.Add("G",tree.Root);
 
             //Console.WriteLine(tree.FindNodeByData_(tree.Root,"F"));
 
@@ -131,8 +160,6 @@ namespace DataHierarchyBasicExercises
              * 
              */
             #endregion
-
-
 
             #region 集合 字典 数据结构
             //LinkedListDictionary<string, int> dic = new LinkedListDictionary<string, int>();
