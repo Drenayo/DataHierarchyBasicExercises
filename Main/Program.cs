@@ -29,38 +29,44 @@ namespace DataHierarchyBasicExercises
             //Console.WriteLine(str2);
             //Console.WriteLine(MyString.Concat(str1,str2));
 
-            Stopwatch t1 = new Stopwatch();
-            StringBuilder strb = new StringBuilder();
-            for (int i = 0; i < 10000000; i++)
-            {
-                strb.Append(i.ToString());
-            }
-            strb.Append("A");
+            // 测试BF算法
+            //Stopwatch t1 = new Stopwatch();
+            //StringBuilder strb = new StringBuilder();
+            //for (int i = 0; i < 10000000; i++)
+            //{
+            //    strb.Append(i.ToString());
+            //}
+            //strb.Append("A");
 
-            t1.Start();
-            MyString str1 = new MyString(strb.ToString());
-            Console.WriteLine(str1.IndexOf_BF("A"));
-            t1.Stop();
-            Console.WriteLine($"查询用时：{t1.ElapsedMilliseconds} ms \n\n");
+            //t1.Start();
+            //MyString str1 = new MyString(strb.ToString());
+            //Console.WriteLine(str1.IndexOf_BF("A"));
+            //t1.Stop();
+            //Console.WriteLine($"查询用时：{t1.ElapsedMilliseconds} ms \n\n");
 
             #endregion
-
-
 
             #region 树
 
             // 树的孩子兄弟表示法 二叉链表表示法
-            //TreeChildBrother<string> tree = new TreeChildBrother<string>();
+            TreeChildBrother<string> tree = new TreeChildBrother<string>();
 
-            //tree.Add("A",tree.Root);
-            //tree.Add("B",tree.Root);
-            //tree.Add("C",tree.Root);
-            //tree.Add("D",tree.Root);
-            //tree.Add("E",tree.Root);
-            //tree.Add("F",tree.Root);
-            //tree.Add("G",tree.Root);
+            tree.Add("A", tree.Root);
+            tree.Add("B", tree.Root);
+            tree.Add("C", tree.FindNodeByData("B"));
+            tree.Add("D", tree.Root);
+            tree.Add("E", tree.Root);
+            tree.Add("F", tree.Root);
 
-            //Console.WriteLine(tree.FindNodeByData_(tree.Root,"F"));
+            List<TreeChildBrother<string>.Node> list = tree.GetChildren(tree.Root);
+
+            foreach (TreeChildBrother<string>.Node item in list)
+            {
+                Console.WriteLine(item);
+            }
+            //  tree.LevelOrderTraversal();
+
+            //Console.WriteLine(tree.FindNodeByData_(tree.Root, "F"));
 
             //tree.PreOrderTraversal(tree.Root);
             //Console.WriteLine();

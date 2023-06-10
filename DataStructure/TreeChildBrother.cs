@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace DataHierarchyBasicExercises.DataStructure
 {
     /// <summary>
-    /// 树的孩子兄弟表示法
+    /// 树的孩子兄弟表示法  二叉链表表示法
     /// </summary>
     class TreeChildBrother<T>
     {
@@ -120,59 +120,53 @@ namespace DataHierarchyBasicExercises.DataStructure
         }
 
 
-        ///// <summary>
-        ///// 查找一个Node并返回
-        ///// </summary>
-        ///// <param name="item"></param>
-        ///// <returns></returns>
-        //public Node FindNode(Node item)
-        //{
-        //    return FindNode_(root, item);
-        //}
-        //private Node FindNode_(Node root,Node item)
-        //{
-        //    if (IsEmpty || root == null) return null;
-
-        //    if (root.Equals(item)) return root;
-
-        //    if (root.firstChild != null)
-        //        PreOrderTraversal(root.firstChild);
-        //    if (root.nextSibling != null)
-        //        PreOrderTraversal(root.nextSibling);
-
-        //    return null;
-        //}
-
-        ///// <summary>
-        /////  根据数据查找Node并返回
-        ///// </summary>
-        ///// <param name="data"></param>
-        ///// <returns></returns>
-        //public Node FindNodeByData(T data)
-        //{
-        //    Node n = FindNodeByData_(root, data);
-        //    Console.WriteLine(n.data);
-        //    return n;
-        //}
-        //public Node FindNodeByData_(Node root, T data)
-        //{
-        //    if (IsEmpty || root == null) return null;
-
-        //    if (root.data.Equals(data))
-        //    {
-        //        Console.WriteLine(root);
-        //        return root;
-        //    }
-                
 
 
-        //    if (root.firstChild != null)
-        //        FindNodeByData_(root.firstChild,data);
-        //    if (root.nextSibling != null)
-        //        FindNodeByData_(root.nextSibling,data);
+        /// <summary>
+        ///  根据数据查找Node并返回
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public Node FindNodeByData(T data)
+        {
+            if (IsEmpty) return null;
 
-        //    return null;
-        //}
+            Queue<Node> queue = new Queue<Node>();
+            queue.Enqueue(root);
+
+            while (queue.Count > 0)
+            {
+                int levelSize = queue.Count;
+                for (int i = 0; i < levelSize; i++)
+                {
+                    Node node = queue.Dequeue();
+                    if (node.data.Equals(data))
+                        return node;
+
+                    if (node.firstChild != null)
+                        queue.Enqueue(node.firstChild);
+                    if (node.nextSibling != null)
+                        queue.Enqueue(node.nextSibling);
+                }
+            }
+
+            return null;
+        }
+
+        // 遍历一个节点的所有子节点
+        public List<Node> GetChildren(Node node)
+        {
+            if (IsEmpty || node == null || !IsNodeExist(node)) return null;
+            List<Node> list = new List<Node>();
+            Node next = node.firstChild;
+            while (next != null)
+            {
+                list.Add(next);
+                next = next.nextSibling;
+            }
+            
+            return list;
+        }
 
         /// <summary>
         /// 完全二叉树的添加方法，普通树使用这种方法，转化的二叉树会变成完全二叉树，无法恢复普通树结构
@@ -255,6 +249,33 @@ namespace DataHierarchyBasicExercises.DataStructure
         }
 
         // 层序遍历 
+        public void LevelOrderTraversal()
+        {
+            if (IsEmpty) return;
+
+            Queue<Node> queue = new Queue<Node>();
+            queue.Enqueue(root);
+
+            while (queue.Count > 0)
+            {
+                int levelSize = queue.Count;
+                for (int i = 0; i < levelSize; i++)
+                {
+                    Node node = queue.Dequeue();
+                    Console.Write(node.ToString());
+
+                    if (node.firstChild != null)
+                        queue.Enqueue(node.firstChild);
+                    if (node.nextSibling != null)
+                        queue.Enqueue(node.nextSibling);
+                }
+            }
+            Console.WriteLine();
+        }
+
+
+
+
 
         // 排序操作
 
