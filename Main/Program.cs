@@ -15,17 +15,20 @@ namespace DataHierarchyBasicExercises
     {
         static void Main(string[] args)
         {
+
+            #region 算法思想学习
             //List<int> list = new List<int>();
             //list = GenerateTestData.GetRandomLengthList_Int(10, 100);
             //PrintResult<int>.PrintList(list, "Y:");
             //Sort.QuickSort(list);
             //PrintResult<int>.PrintList(list, "X:");
-            #region 算法思想学习
-            StopwatchTest.SortSpeedTest(10000, 10000, SortType.冒泡);
-            StopwatchTest.SortSpeedTest(10000, 10000, SortType.归并);
-            StopwatchTest.SortSpeedTest(10000, 10000, SortType.插入);
-            StopwatchTest.SortSpeedTest(10000, 10000, SortType.选择);
-            StopwatchTest.SortSpeedTest(10000, 10000, SortType.快速);
+
+            //StopwatchTest.SortSpeedTest(10000, 10000, SortType.冒泡);
+            //StopwatchTest.SortSpeedTest(10000, 10000, SortType.归并);
+            ////StopwatchTest.SortSpeedTest(10000, 10000, SortType.插入);
+            //StopwatchTest.SortSpeedTest(10000, 10000, SortType.选择);
+            //StopwatchTest.SortSpeedTest(10000, 10000, SortType.快速);
+            //StopwatchTest.SortSpeedTest(10000, 10000, SortType.系统);
 
 
             //StopwatchTest.SerachSpeedTest(10000, 100, 100000, SearchType.遍历, 50);
@@ -68,12 +71,31 @@ namespace DataHierarchyBasicExercises
             // 树的孩子兄弟表示法 二叉链表表示法
             //TreeChildBrother<string> tree = new TreeChildBrother<string>();
 
+            //tree.Add("Root", tree.Root);
             //tree.Add("A", tree.Root);
             //tree.Add("B", tree.Root);
-            //tree.Add("C", tree.FindNodeByData("B"));
+            //tree.Add("C", tree.Root);
             //tree.Add("D", tree.Root);
             //tree.Add("E", tree.Root);
             //tree.Add("F", tree.Root);
+            //tree.Add("I", tree.FindNodeByData("F"));
+            //tree.Add("J", tree.FindNodeByData("F"));
+            //tree.Add("K", tree.FindNodeByData("F"));
+            //tree.Add("L", tree.FindNodeByData("F"));
+            //tree.Add("M", tree.FindNodeByData("B"));
+            //tree.Add("N", tree.FindNodeByData("B"));
+            //tree.Add("O", tree.FindNodeByData("N"));
+            //tree.Add("P", tree.FindNodeByData("A"));
+
+
+
+            //tree.PreOrderTraversal(tree.Root);
+            //Console.WriteLine();
+            //tree.InOrderTraversal(tree.Root);
+            //Console.WriteLine();
+            //tree.PostOrderTraversal(tree.Root);
+            //Console.WriteLine();
+            //tree.LevelOrderTraversal();
 
             //List<TreeChildBrother<string>.Node> list = tree.GetChildren(tree.Root);
 
@@ -82,34 +104,32 @@ namespace DataHierarchyBasicExercises
             //    Console.WriteLine(item);
             //}
 
-
-
-            //  tree.LevelOrderTraversal();
-
-            //Console.WriteLine(tree.FindNodeByData_(tree.Root, "F"));
-
-            //tree.PreOrderTraversal(tree.Root);
-            //Console.WriteLine();
-            //tree.InOrderTraversal(tree.Root);
-            //Console.WriteLine();
-            //tree.PostOrderTraversal(tree.Root);
-
-
-
-
             // 子节点链表示法
             //TreeChild<string> tree = new TreeChild<string>("Root");
             //tree.AddNode("A", tree.Root);
-            //tree.AddNode("B", tree.Root);
-            //tree.AddNode("C", tree.Root);
-            //tree.AddNode("E", tree.AddNode("D", tree.AddNode("C", tree.Root)));
+            //tree.AddNode("B", tree.GetNodeByData("A"));
+            //tree.AddNode("C", tree.GetNodeByData("A"));
+            //tree.AddNode("D", tree.GetNodeByData("A"));
+            //tree.AddNode("E", tree.GetNodeByData("A"));
+            //tree.AddNode("F", tree.GetNodeByData("B"));
+            //tree.AddNode("G", tree.GetNodeByData("C"));
+            //tree.AddNode("H", tree.GetNodeByData("C"));
+            //tree.AddNode("I", tree.GetNodeByData("C"));
+            //tree.AddNode("O", tree.GetNodeByData("I"));
+            //tree.AddNode("P", tree.GetNodeByData("I"));
+
+
             //Console.WriteLine("前序：");
             //tree.PreOrderTraversal(tree.Root);
             //Console.WriteLine();
+
+            //Console.WriteLine("后序：");
+            //tree.PostOrderTraversal(tree.Root);
+            //Console.WriteLine();
+
             //Console.WriteLine("层序：");
             //tree.LevelOrderTraversal(tree.Root);
             //Console.WriteLine();
-
 
             //tree.PrintArray();
             //Console.WriteLine("深度：" + tree.GetDeep());
@@ -124,6 +144,7 @@ namespace DataHierarchyBasicExercises
             //{
             //    Console.WriteLine(item);
             //}
+
             // 父节点表示法
             //Tree_Parent<string> tree = new Tree_Parent<string>("Root");
             //Tree_Parent<string>.Node nodeTemp = null;
@@ -168,6 +189,8 @@ namespace DataHierarchyBasicExercises
             //    Console.WriteLine(arr[i]);
             //}
 
+
+            // 二叉树数组 实现
             //CompleteBinaryTree<String> tree = new CompleteBinaryTree<String>(30);
             //for (char i = 'A'; i <= 'Z'; i++)
             //{

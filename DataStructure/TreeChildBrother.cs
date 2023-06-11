@@ -119,9 +119,6 @@ namespace DataHierarchyBasicExercises.DataStructure
             return false;
         }
 
-
-
-
         /// <summary>
         ///  根据数据查找Node并返回
         /// </summary>
@@ -281,6 +278,5 @@ namespace DataHierarchyBasicExercises.DataStructure
 
         // 创建二叉树，按照什么顺序，先序，中序，后序
         // TODO 层序遍历、删除、查找、堆排序、求深度、叶子节点数、
-
     }
 }

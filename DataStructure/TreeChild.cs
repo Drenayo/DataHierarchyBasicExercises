@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace DataHierarchyBasicExercises.DataStructure
 {
     /// <summary>
-    /// 普通树实现 孩子表示法  子节点链
+    /// 普通树实现 孩子表示法  子节点链  多叉树
     /// </summary>
     class TreeChild<T>
     {
@@ -39,10 +39,11 @@ namespace DataHierarchyBasicExercises.DataStructure
 
             public override string ToString()
             {
-                if (first != null)
-                    return $"[{data}|{first.pos}]";
-                else
-                    return $"[{data}|null]";
+                return $"[{data}]";
+                //if (first != null)
+                //    return $"[{data}|{first.pos}]";
+                //else
+                //    return $"[{data}|null]";
             }
         }
 
@@ -204,6 +205,23 @@ namespace DataHierarchyBasicExercises.DataStructure
                         PreOrderTraversal(child);
                     }
                 }
+            }
+        }
+
+        // 后序遍历
+        public void PostOrderTraversal(Node node)
+        {
+            if (node != null)
+            {
+                
+                if (node.first != null)
+                {
+                    foreach (Node child in GetChildren(node))
+                    {
+                        PostOrderTraversal(child);
+                    }
+                }
+                Console.Write(node);
             }
         }
 

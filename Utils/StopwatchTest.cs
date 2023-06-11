@@ -17,7 +17,8 @@ namespace DataHierarchyBasicExercises.Utils
         归并,
         选择,
         插入,
-        快速
+        快速,
+        系统
     }
     public enum SearchType
     {
@@ -85,6 +86,9 @@ namespace DataHierarchyBasicExercises.Utils
                     break;
                 case SortType.快速:
                     Sort.QuickSort(list);
+                    break;
+                case SortType.系统:
+                    list.Sort();
                     break;
                 default:
                     break;

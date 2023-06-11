@@ -94,9 +94,9 @@ namespace DataHierarchyBasicExercises.DataStructure
             return -1;
         }
 
-        //public int IndexOf_KMP(string str)
-        //{
+        public int IndexOf_KMP(string str)
+        {
 
-        //}
+        }
     }
 }
