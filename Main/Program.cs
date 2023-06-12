@@ -16,6 +16,31 @@ namespace DataHierarchyBasicExercises
         static void Main(string[] args)
         {
 
+            #region 图
+            // 邻接表 无向图 有向图  添加点边，遍历 测试
+            AdjacencyListGraph<string> adj = new AdjacencyListGraph<string>();
+            adj.AddVertex("A");
+            adj.AddVertex("B");
+            adj.AddVertex("C");
+            adj.AddVertex("D");
+            adj.AddVertex("E");
+            
+            
+            adj.AddEdge(adj.Find("A"), adj.Find("B"));
+            adj.AddEdge(adj.Find("A"), adj.Find("C"));
+            adj.AddEdge(adj.Find("E"), adj.Find("D"));
+            adj.AddEdge(adj.Find("C"), adj.Find("D"));
+            adj.AddEdge(adj.Find("B"), adj.Find("D"));
+
+
+            adj.Print();
+            Console.WriteLine($"图的顶点：{adj.vexNum}，边：{adj.edgeNum}");
+
+            #endregion
+
+
+
+
             #region 算法思想学习
             //List<int> list = new List<int>();
             //list = GenerateTestData.GetRandomLengthList_Int(10, 100);

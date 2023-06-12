@@ -46,6 +46,7 @@
     <Compile Include="Algorithm\Search.cs" />
     <Compile Include="Algorithm\分治思想.cs" />
     <Compile Include="Algorithm\枚举思想.cs" />
+    <Compile Include="DataStructure\AdjacencyListGraph.cs" />
     <Compile Include="DataStructure\ArrayCycleQueue.cs" />
     <Compile Include="DataStructure\ArrayQueue.cs" />
     <Compile Include="DataStructure\ArrayStack.cs" />
