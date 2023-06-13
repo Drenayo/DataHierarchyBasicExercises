@@ -8,6 +8,7 @@ using DataHierarchyBasicExercises.Algorithm;
 using DataHierarchyBasicExercises.DataStructure;
 using DataHierarchyBasicExercises.Utils;
 using System.Diagnostics;
+using DataHierarchyBasicExercises.Training;
 
 namespace DataHierarchyBasicExercises
 {
@@ -16,30 +17,80 @@ namespace DataHierarchyBasicExercises
         static void Main(string[] args)
         {
 
-            #region 图
-            // 邻接表 无向图 有向图  添加点边，遍历 测试
-            AdjacencyListGraph<string> adj = new AdjacencyListGraph<string>();
-            adj.AddVertex("A");
-            adj.AddVertex("B");
-            adj.AddVertex("C");
-            adj.AddVertex("D");
-            adj.AddVertex("E");
-            
-            
-            adj.AddEdge(adj.Find("A"), adj.Find("B"));
-            adj.AddEdge(adj.Find("A"), adj.Find("C"));
-            adj.AddEdge(adj.Find("E"), adj.Find("D"));
-            adj.AddEdge(adj.Find("C"), adj.Find("D"));
-            adj.AddEdge(adj.Find("B"), adj.Find("D"));
+            #region 树 练习
+            NaryTree<string> nary = new NaryTree<string>("R");
+            nary.Add("A", nary.Root);
+            nary.Add("B", nary.Root);
+            nary.Add("C", nary.Root);
+            nary.Add("D", nary.FindNodeByData("A"));
+            nary.Add("E", nary.FindNodeByData("A"));
+            nary.Add("F", nary.FindNodeByData("A"));
+            nary.Add("I", nary.FindNodeByData("A"));
+            nary.Add("J", nary.FindNodeByData("A"));
 
+            //nary.Add("B", nary.FindNodeByData("A"));
+            //nary.Add("D", nary.FindNodeByData("A"));
+            //nary.Add("E", nary.FindNodeByData("B"));
+            //nary.Add("F", nary.FindNodeByData("E"));
+            //nary.Add("G", nary.FindNodeByData("E"));
+            //nary.Add("H", nary.FindNodeByData("E"));
+            //nary.Add("J", nary.FindNodeByData("G"));
+            //nary.Add("K", nary.FindNodeByData("B"));
 
-            adj.Print();
-            Console.WriteLine($"图的顶点：{adj.vexNum}，边：{adj.edgeNum}");
+            Console.WriteLine("递归前序");
+            nary.PreOrderTraversal(nary.Root);
+            Console.WriteLine();
+            Console.WriteLine("栈前序");
+            nary.PreOrder_N(nary.Root);
+            Console.WriteLine(); 
+            Console.WriteLine();
+            Console.WriteLine("递归后序");
+            nary.PostOrderTraversal(nary.Root);
+            Console.WriteLine();
+            Console.WriteLine("栈后序");
+            nary.PostOrder_N(nary.Root);
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("队列层序2叉");
+            nary.LevelOrderTraversal_2();
+            Console.WriteLine();
+            Console.WriteLine("队列层序N叉");
+            nary.LevelOrderTraversal_N();
+            Console.WriteLine();
+            Console.WriteLine();
 
+            Console.WriteLine($"层深：{nary.GetDepth(nary.Root)}");
+
+            Console.WriteLine($"层深_：{nary.GetDepth2(nary.Root)}");
+
+            Console.WriteLine($"叶子节点数_2：{nary.GetLeafNodeNumber_2(nary.Root)}");
+            Console.WriteLine($"叶子节点数_N：{nary.GetLeafNodeNumber_N(nary.Root)}");
             #endregion
 
 
 
+
+            #region 图
+            // 邻接表 无向图 有向图  添加点边，遍历 测试
+            //AdjacencyListGraph<string> adj = new AdjacencyListGraph<string>();
+            //adj.AddVertex("A");
+            //adj.AddVertex("B");
+            //adj.AddVertex("C");
+            //adj.AddVertex("D");
+            //adj.AddVertex("E");
+
+
+            //adj.AddEdge(adj.Find("A"), adj.Find("B"));
+            //adj.AddEdge(adj.Find("A"), adj.Find("C"));
+            //adj.AddEdge(adj.Find("E"), adj.Find("D"));
+            //adj.AddEdge(adj.Find("C"), adj.Find("D"));
+            //adj.AddEdge(adj.Find("B"), adj.Find("D"));
+
+
+            //adj.Print();
+            //Console.WriteLine($"图的顶点：{adj.vexNum}，边：{adj.edgeNum}");
+
+            #endregion
 
             #region 算法思想学习
             //List<int> list = new List<int>();

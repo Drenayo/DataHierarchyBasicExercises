@@ -65,6 +65,7 @@
     <Compile Include="DataStructure\TreeChild.cs" />
     <Compile Include="DataStructure\TreeChildBrother.cs" />
     <Compile Include="DataStructure\TreeParent.cs" />
+    <Compile Include="Training\NaryTree.cs" />
     <Compile Include="Utils\AlgorithmTester.cs" />
     <Compile Include="Algorithm\Sort.cs" />
     <Compile Include="Main\Program.cs" />
