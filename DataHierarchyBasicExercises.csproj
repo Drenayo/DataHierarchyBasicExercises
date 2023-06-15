@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algorithm\RRT.cs" />
     <Compile Include="Algorithm\Search.cs" />
     <Compile Include="Algorithm\分治思想.cs" />
     <Compile Include="Algorithm\枚举思想.cs" />
@@ -65,6 +66,7 @@
     <Compile Include="DataStructure\TreeChild.cs" />
     <Compile Include="DataStructure\TreeChildBrother.cs" />
     <Compile Include="DataStructure\TreeParent.cs" />
+    <Compile Include="Training\ArrayTar.cs" />
     <Compile Include="Training\NaryTree.cs" />
     <Compile Include="Utils\AlgorithmTester.cs" />
     <Compile Include="Algorithm\Sort.cs" />

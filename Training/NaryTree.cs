@@ -74,6 +74,36 @@ namespace DataHierarchyBasicExercises.Training
             count++;
         }
 
+        // 找父节点
+        //public Node GetParent(Node node)
+        //{
+        //    if (IsEmpty) return null;
+        //    if (root.firstChild.Equals(node)) return root;
+        //    if (node == null) return null;
+
+        //    Queue<Node> queue = new Queue<Node>();
+        //    queue.Enqueue(root);
+
+        //    while (queue.Count > 0)
+        //    {
+        //        Node del = queue.Dequeue();
+                
+        //        if (del.firstChild != null)
+        //        {
+        //            if (del.firstChild.Equals(node)) return del;
+        //            queue.Enqueue(del.firstChild);
+        //        }
+                    
+        //        if (del.nextSibling != null)
+        //        {
+        //          if (del.nextSibling.Equals(node)) return del;
+        //            queue.Enqueue(del.nextSibling);
+        //        }
+                    
+        //    }
+        //    return null;
+        //}
+
         // 判断节点是否存在
         public bool IsExists(Node node)
         {
@@ -275,6 +305,7 @@ namespace DataHierarchyBasicExercises.Training
             }
             return depth + 1;
         }
+
         // 获取层深 第二种写法
         public int GetDepth2(Node node)
         {

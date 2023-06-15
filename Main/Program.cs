@@ -17,58 +17,81 @@ namespace DataHierarchyBasicExercises
         static void Main(string[] args)
         {
 
-            #region 树 练习
-            NaryTree<string> nary = new NaryTree<string>("R");
-            nary.Add("A", nary.Root);
-            nary.Add("B", nary.Root);
-            nary.Add("C", nary.Root);
-            nary.Add("D", nary.FindNodeByData("A"));
-            nary.Add("E", nary.FindNodeByData("A"));
-            nary.Add("F", nary.FindNodeByData("A"));
-            nary.Add("I", nary.FindNodeByData("A"));
-            nary.Add("J", nary.FindNodeByData("A"));
+            #region RRT 算法练习
 
-            //nary.Add("B", nary.FindNodeByData("A"));
-            //nary.Add("D", nary.FindNodeByData("A"));
-            //nary.Add("E", nary.FindNodeByData("B"));
-            //nary.Add("F", nary.FindNodeByData("E"));
-            //nary.Add("G", nary.FindNodeByData("E"));
-            //nary.Add("H", nary.FindNodeByData("E"));
-            //nary.Add("J", nary.FindNodeByData("G"));
-            //nary.Add("K", nary.FindNodeByData("B"));
+            Graph graph = new Graph(10);
 
-            Console.WriteLine("递归前序");
-            nary.PreOrderTraversal(nary.Root);
-            Console.WriteLine();
-            Console.WriteLine("栈前序");
-            nary.PreOrder_N(nary.Root);
-            Console.WriteLine(); 
-            Console.WriteLine();
-            Console.WriteLine("递归后序");
-            nary.PostOrderTraversal(nary.Root);
-            Console.WriteLine();
-            Console.WriteLine("栈后序");
-            nary.PostOrder_N(nary.Root);
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine("队列层序2叉");
-            nary.LevelOrderTraversal_2();
-            Console.WriteLine();
-            Console.WriteLine("队列层序N叉");
-            nary.LevelOrderTraversal_N();
-            Console.WriteLine();
-            Console.WriteLine();
+            graph.AddEdge(0, 1);
+            graph.AddEdge(1, 2);
+            graph.AddEdge(2, 3);
+            graph.AddEdge(3, 4);
+            graph.AddEdge(4, 5);
+            graph.AddEdge(5, 6);
+            graph.AddEdge(6, 7);
+            graph.AddEdge(7, 8);
+            graph.AddEdge(8, 9);
 
-            Console.WriteLine($"层深：{nary.GetDepth(nary.Root)}");
+            List<int> path = graph.RRT(0, 9, 1000, 0.5);
 
-            Console.WriteLine($"层深_：{nary.GetDepth2(nary.Root)}");
+            foreach (int node in path)
+            {
+                Console.Write(node + " ");
+            }
 
-            Console.WriteLine($"叶子节点数_2：{nary.GetLeafNodeNumber_2(nary.Root)}");
-            Console.WriteLine($"叶子节点数_N：{nary.GetLeafNodeNumber_N(nary.Root)}");
+            Console.WriteLine("---END---");
             #endregion
 
+            #region 树 练习
+            //NaryTree<string> nary = new NaryTree<string>("R");
+            //nary.Add("A", nary.Root);
+            //nary.Add("B", nary.Root);
+            //nary.Add("C", nary.Root);
+            //nary.Add("D", nary.FindNodeByData("A"));
+            //nary.Add("E", nary.FindNodeByData("A"));
+            //nary.Add("F", nary.FindNodeByData("A"));
+            //nary.Add("I", nary.FindNodeByData("A"));
+            //nary.Add("J", nary.FindNodeByData("A"));
 
+            //Console.WriteLine(nary.GetParent(nary.FindNodeByData("I")));
 
+            ////nary.Add("B", nary.FindNodeByData("A"));
+            ////nary.Add("D", nary.FindNodeByData("A"));
+            ////nary.Add("E", nary.FindNodeByData("B"));
+            ////nary.Add("F", nary.FindNodeByData("E"));
+            ////nary.Add("G", nary.FindNodeByData("E"));
+            ////nary.Add("H", nary.FindNodeByData("E"));
+            ////nary.Add("J", nary.FindNodeByData("G"));
+            ////nary.Add("K", nary.FindNodeByData("B"));
+
+            //Console.WriteLine("递归前序");
+            //nary.PreOrderTraversal(nary.Root);
+            //Console.WriteLine();
+            //Console.WriteLine("栈前序");
+            //nary.PreOrder_N(nary.Root);
+            //Console.WriteLine(); 
+            //Console.WriteLine();
+            //Console.WriteLine("递归后序");
+            //nary.PostOrderTraversal(nary.Root);
+            //Console.WriteLine();
+            //Console.WriteLine("栈后序");
+            //nary.PostOrder_N(nary.Root);
+            //Console.WriteLine();
+            //Console.WriteLine();
+            //Console.WriteLine("队列层序2叉");
+            //nary.LevelOrderTraversal_2();
+            //Console.WriteLine();
+            //Console.WriteLine("队列层序N叉");
+            //nary.LevelOrderTraversal_N();
+            //Console.WriteLine();
+            //Console.WriteLine();
+
+            //Console.WriteLine($"层深：{nary.GetDepth(nary.Root)}");
+
+            //Console.WriteLine($"层深_：{nary.GetDepth2(nary.Root)}");
+
+            //Console.WriteLine($"叶子节点数_2：{nary.GetLeafNodeNumber_2(nary.Root)}");
+            //Console.WriteLine($"叶子节点数_N：{nary.GetLeafNodeNumber_N(nary.Root)}");
+            #endregion
 
             #region 图
             // 邻接表 无向图 有向图  添加点边，遍历 测试
